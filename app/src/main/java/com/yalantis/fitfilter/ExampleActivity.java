@@ -57,6 +57,7 @@ public class ExampleActivity extends AppCompatActivity implements FilterListener
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         mRecyclerView.setAdapter(mAdapter = new QuestionsAdapter(this, mAllQuestions = getQuestions()));
         mRecyclerView.setItemAnimator(new FiltersListItemAnimator());
+        mRecyclerView.addItemDecoration(new DividerItemDecoration(this, R.drawable.divider));
     }
 
     private void calculateDiff(final List<Question> oldList, final List<Question> newList) {

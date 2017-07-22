@@ -62,6 +62,8 @@ public class QuestionsAdapter extends RecyclerView.Adapter<QuestionsAdapter.View
         drawable1.setCornerRadius(1000);
         drawable1.setColor(secondTag.getColor());
         holder.secondFilter.setBackgroundDrawable(drawable1);
+
+        View v = holder.itemView;
     }
 
     private int getColor(int color) {
