@@ -105,7 +105,7 @@ public class ExampleActivity extends AppCompatActivity implements FilterListener
     private List<Question> getQuestions() {
         return new ArrayList<Question>() {{
             add(new Question("Carol Bell", "Graphic Designer",
-                    "http://kingofwallpapers.com/girl/girl-011.jpg", "Nov 20, 6:12 PM",
+                    "http://www.braindirector.com/wp-content/uploads/2015/11/image-for-taking-a-girls-number.jpg", "Nov 20, 6:12 PM",
                     "What is the first step to transform an idea into an actual project?", new ArrayList<Tag>() {{
                 add(new Tag(mTitles[2], mColors[2]));
                 add(new Tag(mTitles[4], mColors[4]));
@@ -123,7 +123,7 @@ public class ExampleActivity extends AppCompatActivity implements FilterListener
                 add(new Tag(mTitles[8], mColors[8]));
             }}));
             add(new Question("Lacey Barbara", "QA Engineer",
-                    "http://kingofwallpapers.com/girl/girl-019.jpg", "Nov 20, 6:12 PM",
+                    "http://f9view.com/wp-content/uploads/2013/10/Most-Beautiful-Girls-In-The-World.jpg", "Nov 20, 6:12 PM",
                     "What is the first step to transform an idea into an actual project?", new ArrayList<Tag>() {{
                 add(new Tag(mTitles[3], mColors[3]));
                 add(new Tag(mTitles[9], mColors[9]));
