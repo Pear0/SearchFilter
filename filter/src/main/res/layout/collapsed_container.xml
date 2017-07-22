@@ -26,6 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
         android:textColor="#827f93"
         android:textSize="18sp"
         tools:text="All categories" />
@@ -37,7 +38,8 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/dividerTop"
-        android:layout_toLeftOf="@+id/collapseView">
+        android:layout_toLeftOf="@+id/collapseView"
+        android:layout_toStartOf="@+id/collapseView">
 
         <com.yalantis.filter.widget.CollapsedFilterView
             android:id="@+id/collapsedFilter"
@@ -50,6 +52,7 @@
         android:id="@+id/collapseView"
         android:layout_width="@dimen/item_height"
         android:layout_height="@dimen/item_height"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true" />
 </RelativeLayout>

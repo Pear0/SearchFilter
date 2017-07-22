@@ -81,7 +81,7 @@ class FiltersListItemAnimator : SimpleItemAnimator() {
             }
             if (removalsPending) {
                 val view = moves[0].holder.itemView
-                ViewCompat.postOnAnimationDelayed(view, mover, getRemoveDuration())
+                ViewCompat.postOnAnimationDelayed(view, mover, removeDuration)
             } else {
                 mover.run()
             }
@@ -101,7 +101,7 @@ class FiltersListItemAnimator : SimpleItemAnimator() {
             }
             if (removalsPending) {
                 val holder = changes[0].oldHolder
-                ViewCompat.postOnAnimationDelayed(holder!!.itemView, changer, getRemoveDuration())
+                ViewCompat.postOnAnimationDelayed(holder!!.itemView, changer, removeDuration)
             } else {
                 changer.run()
             }

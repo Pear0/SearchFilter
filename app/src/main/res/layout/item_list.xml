@@ -29,6 +29,7 @@
         android:layout_marginTop="10dp"
         android:layout_toEndOf="@+id/avatar"
         android:layout_toLeftOf="@+id/text_date"
+        android:layout_toRightOf="@+id/avatar"
         android:layout_toStartOf="@+id/text_date"
         android:text="Carol Bell"
         android:textColor="#827f93"
@@ -39,6 +40,7 @@
         android:id="@+id/text_job_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/text_name"
         android:layout_alignStart="@+id/text_name"
         android:layout_below="@+id/text_name"
         android:layout_marginBottom="10dp"
@@ -50,6 +52,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         android:layout_below="@+id/dividerTop"
         android:layout_margin="26dp"
         android:text="Nov 20, 6:12 PM"
@@ -61,6 +64,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/avatar"
         android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
         android:padding="10dp"
         android:textColor="@android:color/white" />
 
@@ -69,8 +73,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/filter_first"
+        android:layout_marginStart="10dp"
         android:layout_marginLeft="10dp"
         android:layout_toEndOf="@+id/filter_first"
+        android:layout_toRightOf="@+id/filter_first"
         android:padding="10dp"
         android:textColor="@android:color/white" />
 
@@ -89,6 +95,7 @@
         android:layout_height="24dp"
         android:layout_below="@+id/divider"
         android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:src="@drawable/ic_heart"
         android:tint="#827f93" />
@@ -100,6 +107,7 @@
         android:layout_alignTop="@+id/view_likes"
         android:layout_margin="4dp"
         android:layout_toEndOf="@+id/view_likes"
+        android:layout_toRightOf="@+id/view_likes"
         android:text="24"
         android:textColor="#827f93"
         android:textSize="12sp" />
@@ -110,6 +118,7 @@
         android:layout_height="24dp"
         android:layout_below="@+id/divider"
         android:layout_marginLeft="100dp"
+        android:layout_marginStart="100dp"
         android:layout_marginTop="16dp"
         android:src="@drawable/ic_chat"
         android:tint="#827f93" />
@@ -121,6 +130,7 @@
         android:layout_alignTop="@+id/view_chat"
         android:layout_margin="4dp"
         android:layout_toEndOf="@+id/view_chat"
+        android:layout_toRightOf="@+id/view_chat"
         android:text="20 responses"
         android:textColor="#827f93"
         android:textSize="12sp" />
@@ -129,6 +139,7 @@
         android:id="@+id/view_settings"
         android:layout_width="24dp"
         android:layout_height="24dp"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_below="@+id/divider"
         android:layout_margin="16dp"
@@ -139,6 +150,7 @@
         android:id="@+id/text_question"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/filter_first"
         android:layout_margin="16dp"
