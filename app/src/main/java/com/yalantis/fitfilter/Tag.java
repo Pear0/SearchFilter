@@ -2,12 +2,13 @@ package com.yalantis.fitfilter;
 
 import android.support.annotation.NonNull;
 
+import com.pear0.filter.FilterItem;
 import com.yalantis.filter.model.FilterModel;
 
 /**
  * Created by galata on 16.09.16.
  */
-public class Tag implements FilterModel {
+public class Tag implements FilterModel, FilterItem {
     private String text;
     private int color;
 
