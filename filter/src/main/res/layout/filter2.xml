@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/container_expanded"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_above="@+id/container_collapsed"
         android:layout_alignParentTop="true"
-        android:orientation="vertical">
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:background="@color/white">
 
     </android.support.v7.widget.RecyclerView>
 
-    <LinearLayout
+    <android.support.v7.widget.RecyclerView
         android:id="@+id/container_collapsed"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/container_expanded"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_toLeftOf="@+id/collapse_button"
         android:layout_toStartOf="@+id/collapse_button"
-        android:orientation="horizontal">
+        android:background="@color/gray">
 
-    </LinearLayout>
+    </android.support.v7.widget.RecyclerView>
 
     <Button
         android:id="@+id/collapse_button"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/container_expanded"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true" />
 

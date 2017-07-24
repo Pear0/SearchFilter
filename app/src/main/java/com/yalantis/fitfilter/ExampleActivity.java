@@ -9,18 +9,16 @@ import android.support.v7.widget.RecyclerView;
 
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.facebook.imagepipeline.core.ImagePipelineConfig;
-import com.yalantis.filter.adapter.FilterAdapter;
-import com.yalantis.filter.animator.FiltersListItemAnimator;
-import com.yalantis.filter.listener.FilterListener;
-import com.yalantis.filter.widget.Filter;
-import com.yalantis.filter.widget.FilterItem;
+import com.pear0.filter.Filter;
 
+import com.pear0.filter.FilterItem;
+import com.yalantis.filter.animator.FiltersListItemAnimator;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ExampleActivity extends AppCompatActivity implements FilterListener<Tag> {
+public class ExampleActivity extends AppCompatActivity /*implements FilterListener<Tag>*/ {
 
     private RecyclerView mRecyclerView;
 
@@ -45,12 +43,12 @@ public class ExampleActivity extends AppCompatActivity implements FilterListener
         mTitles = getResources().getStringArray(R.array.job_titles);
 
         mFilter = (Filter<Tag>) findViewById(R.id.filter);
-        mFilter.setAdapter(new Adapter(getTags()));
-        mFilter.setListener(this);
+        mFilter.setAdapter(new Filter.Adapter(this, getTags().toArray(new FilterItem[0])));
+        //mFilter.setListener(this);
 
         //the text to show when there's no selected items
-        mFilter.setNoSelectedItemText(getString(R.string.str_all_selected));
-        mFilter.build();
+        //mFilter.setNoSelectedItemText(getString(R.string.str_all_selected));
+        //mFilter.build();
 
 
         mRecyclerView = (RecyclerView) findViewById(R.id.list);
@@ -84,8 +82,8 @@ public class ExampleActivity extends AppCompatActivity implements FilterListener
         }).dispatchUpdatesTo(mAdapter);
     }
 
-    private List<Tag> getTags() {
-        List<Tag> tags = new ArrayList<>();
+    private List<FilterItem> getTags() {
+        List<FilterItem> tags = new ArrayList<>();
 
         for (int i = 0; i < mTitles.length; ++i) {
             tags.add(new Tag(mTitles[i], mColors[i]));
@@ -94,13 +92,13 @@ public class ExampleActivity extends AppCompatActivity implements FilterListener
         return tags;
     }
 
-    @Override
+    /*@Override
     public void onNothingSelected() {
         if (mRecyclerView != null) {
             mAdapter.setQuestions(mAllQuestions);
             mAdapter.notifyDataSetChanged();
         }
-    }
+    }*/
 
     private List<Question> getQuestions() {
         return new ArrayList<Question>() {{
@@ -151,7 +149,7 @@ public class ExampleActivity extends AppCompatActivity implements FilterListener
         return questions;
     }
 
-    @Override
+    /*@Override
     public void onFiltersSelected(@NotNull ArrayList<Tag> filters) {
         List<Question> newQuestions = findByTags(filters);
         List<Question> oldQuestions = mAdapter.getQuestions();
@@ -194,6 +192,6 @@ public class ExampleActivity extends AppCompatActivity implements FilterListener
 
             return filterItem;
         }
-    }
+    }*/
 
 }

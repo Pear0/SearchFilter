@@ -7,4 +7,6 @@ interface FilterItem {
 
     val text: String
 
+    val color: Int
+
 }
